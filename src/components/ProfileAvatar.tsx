@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Upload, Sparkles } from 'lucide-react';
 import { removeBackground, loadImage } from '@/utils/backgroundRemoval';
 import { useToast } from '@/hooks/use-toast';
+import { log } from 'console';
 
 interface ProfileAvatarProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -12,10 +13,12 @@ interface ProfileAvatarProps {
   defaultImage?: string;
 }
 
+const DEFAULT_IMAGE = `${import.meta.env.BASE_URL}/myphoto.png`;
 const ProfileAvatar: React.FC<ProfileAvatarProps> = ({ 
   size = 'xl', 
   showUpload = false,
-  defaultImage = '/myphoto.png'
+  // defaultImage = '/myphoto.png'
+  defaultImage = DEFAULT_IMAGE
 }) => {
   const [currentImage, setCurrentImage] = useState<string>(defaultImage);
   const [isProcessing, setIsProcessing] = useState(false);

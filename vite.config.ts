@@ -19,5 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/wasik-portfolio", // Adjust this if you deploy to a subdirectory
+  base: "/wasik-portfolio",
 }));

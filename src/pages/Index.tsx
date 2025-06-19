@@ -179,7 +179,7 @@ const Index = () => {
               {/* <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/25">
                 View My Work <ArrowRight className="ml-2 h-5 w-5" />
               </Button> */}
-              <a href="/WasikCV.pdf" download>
+              <a href={`${import.meta.env.BASE_URL}/WasikCV.pdf`} download>
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
