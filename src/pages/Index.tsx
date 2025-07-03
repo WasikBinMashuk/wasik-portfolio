@@ -12,7 +12,7 @@ const Index = () => {
 
   const skills = [
     'Laravel', 'PHP', 'MySQL', 'REST APIs',
-    'JavaScript', 'jQuery', 'MongoDB', 'Git',
+    'JavaScript', 'jQuery', 'MSSQL', 'Git',
     'React', 'HTML', 'CSS', 'Tailwind CSS',
   ];
 
@@ -20,27 +20,30 @@ const Index = () => {
     {
       id: 1,
       title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
+      description: 'Full-stack e-commerce solution with Laravel and MySQL. Features include user authentication and admin dashboard.',
+      technologies: ['Laravel', 'MySQL', 'Bootstrap', 'CSS'],
+      // image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
+      image: `${import.meta.env.BASE_URL}/ecommerce.png`,
       link: '#',
-      github: '#'
+      github: 'https://github.com/WasikBinMashuk/DailyShop-eCommerce-laravel-10'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.',
-      technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop',
+      title: 'POS system',
+      description: 'Full stack POS system using Laravel and MySQL. Includes features like sales tracking, inventory management, and user roles.',
+      technologies: ['Laravel', 'MySQL', 'JavaScript','Bootstrap', 'CSS'],
+      // image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop',
+      image: `${import.meta.env.BASE_URL}/pos.png`,
       link: '#',
-      github: '#'
+      github: 'https://github.com/WasikBinMashuk/DailyPOS'
     },
     {
       id: 3,
       title: 'Data Analytics Dashboard',
-      description: 'Interactive dashboard for data visualization and analytics with customizable charts and real-time data processing.',
-      technologies: ['Python', 'Django', 'PostgreSQL', 'Chart.js'],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
+      description: 'Created APIs for a data analytics dashboard using Laravel and MySQL. Includes user authentication and data visualization features.',
+      technologies: ['Laravel', 'MySQL'],
+      // image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
+      image: `${import.meta.env.BASE_URL}/data-analysis.png`,
       link: '#',
       github: '#'
     }
@@ -231,14 +234,10 @@ const Index = () => {
             <div className="animate-slide-up">
               <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">My Story</h3>
               <p className="text-foreground mb-6 leading-relaxed">
-                I'm a passionate Full Stack Developer with over 4 years of experience in building
-                scalable web applications and innovative software solutions. My journey in tech started
-                with a curiosity about how things work, which led me to pursue a career in software development.
+              I'm a passionate Junior Laravel Developer with 2 years of hands-on experience in building web applications and contributing to backend systems. My journey into software development began with a strong curiosity about how websites and apps are built, which soon turned into a career path I'm genuinely excited about.
               </p>
               <p className="text-foreground mb-6 leading-relaxed">
-                I specialize in modern web technologies and have a strong foundation in both frontend
-                and backend development. I'm always eager to learn new technologies and take on
-                challenging projects that push the boundaries of what's possible.
+              I'm constantly looking to improve my skills and stay updated with new tools and techniques in the Laravel ecosystem and beyond. I enjoy taking on new challenges that help me grow, and I’m motivated by the opportunity to build efficient, user-friendly, and scalable applications.
               </p>
               <div className="flex items-center space-x-6 text-muted-foreground">
                 <div className="flex items-center">
@@ -337,14 +336,16 @@ const Index = () => {
                     ))}
                   </div>
                   <div className="flex space-x-3">
-                    <Button size="sm" variant="outline" className="flex-1 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 font-semibold">
+                    {/* <Button size="sm" variant="outline" className="flex-1 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 font-semibold">
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Live Demo
-                    </Button>
-                    <Button size="sm" variant="outline" className="flex-1 hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-cyan-500/10 transition-all duration-300 font-semibold">
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </Button>
+                    </Button> */}
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button size="sm" variant="outline" className="w-full hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-cyan-500/10 transition-all duration-300  font-semibold">
+                        <Github className="h-4 w-4 mr-2" />
+                        Code
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
