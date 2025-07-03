@@ -403,7 +403,7 @@ const Index = () => {
                 View GitHub
               </Button>
             </a>
-            <a href="mailto:your@email.com" rel="noopener noreferrer">
+            <a href="mailto:haquepronoy@email.com" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-red-500/10 font-semibold transform hover:scale-105 transition-all duration-300">
                 <Mail className="mr-2 h-5 w-5" />
                 Send Email
